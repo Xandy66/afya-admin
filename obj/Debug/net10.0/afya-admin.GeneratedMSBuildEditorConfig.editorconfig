@@ -36,6 +36,42 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ALEXANDREBRUNODESOUS/afya-admin/Components/AtividadesRecentes.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBdGl2aWRhZGVzUmVjZW50ZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ALEXANDREBRUNODESOUS/afya-admin/Components/CabecalhoPagina.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYWJlY2FsaG9QYWdpbmEucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ALEXANDREBRUNODESOUS/afya-admin/Components/DashboardCard.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xEYXNoYm9hcmRDYXJkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ALEXANDREBRUNODESOUS/afya-admin/Components/GraficoDistribuicaoClientes.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xHcmFmaWNvRGlzdHJpYnVpY2FvQ2xpZW50ZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ALEXANDREBRUNODESOUS/afya-admin/Components/GraficoReceita.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xHcmFmaWNvUmVjZWl0YS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ALEXANDREBRUNODESOUS/afya-admin/Components/KpiCard.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xLcGlDYXJkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ALEXANDREBRUNODESOUS/afya-admin/Components/PerformanceProjetos.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQZXJmb3JtYW5jZVByb2pldG9zLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ALEXANDREBRUNODESOUS/afya-admin/Components/ProjetosRecentes.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQcm9qZXRvc1JlY2VudGVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ALEXANDREBRUNODESOUS/afya-admin/Components/SeletorPeriodo.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTZWxldG9yUGVyaW9kby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ALEXANDREBRUNODESOUS/afya-admin/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
