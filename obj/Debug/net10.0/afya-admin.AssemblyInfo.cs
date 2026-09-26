@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("afya-admin")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e202e77979303220e3ac0460da8103e1b11d0b4f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e0e0a44812be93929733555574c124023a42af7")]
 [assembly: System.Reflection.AssemblyProductAttribute("afya-admin")]
 [assembly: System.Reflection.AssemblyTitleAttribute("afya-admin")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
