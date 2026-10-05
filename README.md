@@ -19,8 +19,13 @@ Explique com suas palavras o objetivo do projeto e o que a página faz (2 a 4 pa
 
 ## Tecnologias utilizadas
 
-- .NET 10 / Blazor WebAssembly
-- MudBlazor 9
+- **.NET 10** — framework de destino `net10.0`.
+- **Blazor WebAssembly standalone** — execução do código C# no navegador.
+- **MudBlazor 9** — componentes visuais, gráficos, tema e utilitários de layout.
+- **C# e Razor** — modelos, parâmetros, eventos e composição da interface.
+- **HTML e SVG** — estrutura da página hospedeira e texto central do gráfico de rosca.
+- **Google Fonts: Inter e Roboto** — fontes carregadas pelo `index.html` e aplicadas pelo tema.
+- **Git e GitHub** — versionamento e publicação do código.
 
 ## Como executar
 
@@ -33,6 +38,7 @@ dotnet watch
 ```
 
 Informe também a versão do .NET SDK necessária.
+`net10.0`
 
 ## Telas
 
@@ -49,18 +55,88 @@ Informe também a versão do .NET SDK necessária.
 ![Inspeção do HTML no DevTools](docs/prints/devtools.png)
 
 Explique em poucas linhas o que o print do DevTools mostra: qual componente você inspecionou, qual HTML ele gerou e quais classes apareceram.
+O print do DevTools mostra a inspeção do nó principal da aplicação Blazor WebAssembly dentro da tag `<body>`.
+• Componente inspecionado: O componente principal da aplicação (raiz), injetado no escopo global do documento.
+• HTML gerado: A tag de marcação selecionada é a `<div id="app">`, que serve como o container onde toda a árvore de componentes do Blazor é renderizada no navegador.
+• Classes e estilos que apareceram: No painel da direita (Styles), aparecem as variáveis CSS globais de tema do MudBlazor (como --mud-palette-black, --mud-palette-primary, --mud-palette-surface, entre outras), aplicadas no escopo do body e herdadas pela aplicação, definindo as cores de fundo, textos e identidade visual padrão do painel. Também é visível uma tag `<style id="mud-style">` no HTML contendo classes utilitárias internas do framework (como .mud-btn, .mud-btn-root).
+
+
 
 ## Estrutura do projeto
 
-Mostre a árvore de pastas e arquivos e explique em uma linha o papel de cada pasta (`Components`, `Data`, `Layout`, `Pages`, `wwwroot`).
+```text
+afya-admin/
+├── Components/
+│   ├── AtividadesRecentes.razor
+│   ├── CabecalhoPagina.razor
+│   ├── DashboardCard.razor
+│   ├── GraficoDistribuicaoClientes.razor
+│   ├── GraficoReceita.razor
+│   ├── KpiCard.razor
+│   ├── PerformanceProjetos.razor
+│   ├── ProjetosRecentes.razor
+│   ├── SeletorPeriodo.razor
+│   └── Ui.cs
+├── Data/
+│   └── DashboardData.cs
+├── Layout/
+│   ├── MainLayout.razor
+│   └── NavMenu.razor
+├── Pages/
+│   ├── Dashboard.razor
+│   └── NotFound.razor
+├── Properties/
+│   └── launchSettings.json
+├── docs/
+│   └── prints/
+├── wwwroot/
+│   ├── css/app.css
+│   ├── img/alex-morgan.jpg
+│   ├── favicon.png
+│   ├── icon-192.png
+│   └── index.html
+├── .gitignore
+├── _Imports.razor
+├── afya-admin.csproj
+├── App.razor
+├── Program.cs
+└── README.md
+```
+
+| Pasta/arquivo | Responsabilidade |
+|---|---|
+| `Components` | Blocos reutilizáveis de apresentação e funções auxiliares de interface. |
+| `Data` | Records dos modelos e coleções de dados fictícios. |
+| `Layout` | Moldura da aplicação: sidebar, AppBar, navegação, tema e providers MudBlazor. |
+| `Pages` | Componentes associados a rotas; `Dashboard.razor` monta a página inicial. |
+| `wwwroot` | Arquivos estáticos, página HTML hospedeira, imagens e CSS original do template. |
+| `docs/prints` | Capturas usadas na documentação. |
+| `Properties/launchSettings.json` | Perfis de execução, URLs e configuração de depuração. |
+| `Program.cs` | Inicialização do host WebAssembly e registro dos serviços. |
+| `App.razor` | Roteador que associa a URL à página e ao layout. |
+| `_Imports.razor` | Namespaces compartilhados pelos arquivos Razor. |
+| `afya-admin.csproj` | Framework, namespace raiz e referências aos pacotes NuGet. |
+
+`bin/` e `obj/` são gerados pelo build e ficam fora do versionamento. As páginas de exemplo `Home`, `Counter` e `Weather` e o CSS isolado do layout foram removidos.
 
 ## Componentes criados
 
+
 | Componente | Responsabilidade | Parâmetros que recebe |
 |---|---|---|
-| `DashboardCard` | ... | ... |
-| `KpiCard` | ... | ... |
-| (liste todos) | | |
+| `DashboardCard` | Estrutura comum de card com título, subtítulo, ações, menu e conteúdo. | `Titulo` (`string`, obrigatório), `Subtitulo` (`string?`), `Acoes`, `Menu` e `ChildContent` (`RenderFragment?`). |
+| `CabecalhoPagina` | Cabeçalho com título, subtítulo e espaço para ações. | `Titulo` (`string`, obrigatório), `Subtitulo` (`string?`) e `Acoes` (`RenderFragment?`). |
+| `SeletorPeriodo` | Menu para selecionar o período e comunicar a mudança à página. | `Opcoes` (`IReadOnlyList<string>`, obrigatório), `Valor` (`string`) e `ValorChanged` (`EventCallback<string>`). |
+| `KpiCard` | Indicador com ícone, valor, variação e sparkline. | `Kpi` (`Kpi`, obrigatório). |
+| `GraficoReceita` | Gráfico de linha/área com as séries de receita e meta e legenda própria. | `Meses` (`string[]`), `Receita` e `Meta` (`double[]`), todos obrigatórios. |
+| `GraficoDistribuicaoClientes` | Rosca com percentuais dos segmentos, legenda e total no centro. | `Total` (`int`) e `Segmentos` (`IReadOnlyList<SegmentoCliente>`), ambos obrigatórios. |
+| `PerformanceProjetos` | Lista de projetos com progresso, percentuais e tarefas concluídas. | `Projetos` (`IReadOnlyList<ProjetoPerformance>`, obrigatório). |
+| `AtividadesRecentes` | Feed com pessoa, ação, horário relativo e avatares. | `Atividades` (`IReadOnlyList<Atividade>`, obrigatório). |
+| `ProjetosRecentes` | Tabela responsiva de projetos com status, progresso e menu de ações. | `Projetos` (`IReadOnlyList<ProjetoRecente>`, obrigatório). |
+| `MainLayout` | Layout compartilhado, tema, providers, AppBar e sidebar. | `Body` (`RenderFragment`, herdado de `LayoutComponentBase`). |
+| `NavMenu` | Links, separadores e badges da navegação lateral. | Nenhum parâmetro próprio. |
+
+Os componentes de entrada e rota `App`, `Dashboard` e `NotFound` não declaram parâmetros próprios. `Ui.cs` é uma classe auxiliar, não um componente Razor: `Iniciais(string nome)` gera as iniciais dos avatares e `FundoSuave(Color cor)` retorna uma classe utilitária nativa para o fundo dos ícones.
 
 ## O que aprendi
 
