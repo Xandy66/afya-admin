@@ -5,12 +5,12 @@
 
 | | |
 |---|---|
-| **Aluno(a)** | Seu nome completo |
+| **Aluno(a)** | Alexandre Bruno de Sousa Sutil |
 | **Matrícula** | 000000 |
-| **Faculdade** | Nome da faculdade |
-| **Curso** | Nome do curso |
-| **Disciplina** | Nome da disciplina |
-| **Professor(a)** | Nome do professor(a) |
+| **Faculdade** | Afya São Lucas |
+| **Curso** | Programação para Sistemas WEB |
+| **Disciplina** | Ciência da Computação |
+| **Professor(a)** | Liluyoud Cury Lacerda |
 | **Semestre** | 2026.2 |
 
 ## Objetivo do projeto
@@ -21,14 +21,13 @@ Explique com suas palavras o objetivo do projeto e o que a página faz (2 a 4 pa
 
 - .NET 10 / Blazor WebAssembly
 - MudBlazor 9
-- (outras que você usou)
 
 ## Como executar
 
 Passo a passo para outra pessoa clonar e rodar o projeto:
 
 ```bash
-git clone https://github.com/seu-usuario/afya-admin.git
+git clone https://github.com/Xandy66/afya-admin.git
 cd afya-admin
 dotnet watch
 ```
