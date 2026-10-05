@@ -15,7 +15,11 @@
 
 ## Objetivo do projeto
 
-Explique com suas palavras o objetivo do projeto e o que a página faz (2 a 4 parágrafos).
+O objetivo do projeto é desenvolver um painel administrativo para a plataforma fictícia “Afya Pedagógico”, utilizando Blazor WebAssembly e MudBlazor. A proposta é aplicar os conhecimentos de HTML, C#, organização de layouts e componentes visuais em uma aplicação web moderna.
+
+A página funciona como um dashboard, apresentando informações de forma visual e organizada. Ela possui uma barra lateral de navegação, uma barra superior, indicadores de desempenho (KPIs), gráficos de receita e clientes, além de informações sobre projetos e atividades recentes.
+
+O projeto utiliza dados fictícios e todo o visual é construído com os componentes, temas e classes utilitárias do MudBlazor, sem a criação de CSS próprio. A página também possui tema claro e escuro e é responsiva, podendo ser utilizada em diferentes tamanhos de tela.
 
 ## Tecnologias utilizadas
 
@@ -168,8 +172,11 @@ O namespace utiliza afya_admin com underline porque o caractere hífen (-) é um
 
 ## Dificuldades e soluções
 
-Descreva pelo menos **dois problemas** que você enfrentou durante o desenvolvimento e como resolveu cada um.
+Uma das dificuldades que eu tive foi com alguns componentes do MudBlazor que não estavam funcionando direito. Eu fui olhando os erros e tentando entender o que estava acontecendo, até encontrar a forma certa de usar os componentes e conseguir fazer eles funcionarem.
+
+Outro problema que aconteceu foi em um dos arquivos `.razor`, onde algumas tags estavam erradas ou não estavam fechadas corretamente. Isso acabou gerando vários erros de compilação. Eu fui olhando os erros e arrumando as tags até o projeto conseguir compilar normalmente.
 
 ## Melhorias futuras (opcional)
 
 O que você implementaria a seguir? Se fez algum dos desafios da seção 20 do tutorial, descreva aqui.
+Uma das coisas que eu implementei foi a página de Clientes, criando uma nova página para ela e reutilizando os componentes que já existiam no projeto. Também fiz o breadcrumb mudar de acordo com a página atual, usando o NavigationManager, então quando estou no Dashboard aparece Home / Dashboard e quando estou em Clientes aparece Home / Clientes.
